@@ -26,9 +26,9 @@ app.use(express.json());
 
 app.use('/api/tasks', tasksRouter);
 
-app.use(errHandler);
-
 app.use('/api/users', usersRouter);
+
+app.use(errHandler);
 
 app.listen(port, () => {
   console.info(`Server running at ${port}`);
